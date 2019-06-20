@@ -2,13 +2,9 @@ const AssistantV1 = require('ibm-watson/assistant/v1');
 
 const assistant = new AssistantV1({
 
-  version: '2019-02-28',
-  iam_apikey: 'w5gVfFDSyeDAVfQVqQSGls3DE2rgLIkCvpphICNzPP63',
-  url: 'https://gateway.watsonplatform.net/assistant/api'
-  // username: process.env.WATSON_USERNAME,
-  // password: process.env.WATSON_PASSWORD,
-  // url:      process.env.WATSON_URL,
-  // version:  process.env.WATSON_VERSION
+  version: process.env.WATSON_VERSION,
+  iam_apikey:  process.env.WATSON_API_KEY,
+  url: process.env.WATSON_URL
 });
 
 exports.getMessage = body =>
